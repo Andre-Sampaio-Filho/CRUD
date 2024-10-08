@@ -1,0 +1,89 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+table{
+    width: 100%;
+}
+thead{
+    background-color: #ccc;
+}
+td, th{
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+.adicionar{
+    background-color: rgb(0, 168, 0);
+    border-radius: 15px;
+    border: 1px solid rgb(0, 168, 0);
+    color: #fff;
+    cursor: pointer;
+    padding: 5px;
+}
+.alterar{ 
+    background-color: #00c;
+    border-radius: 15px;
+    border: 1px solid #00c;
+    color: #fff;
+    cursor: pointer;
+    padding: 5px;
+}
+.excluir{
+    background-color: #f00;
+    border-radius: 15px;
+    border: 1px solid #f00;
+    color: #fff;
+    cursor: pointer;
+    padding: 5px;
+}
+#modal{
+    display: none;
+    width: 400px;
+
+    position: fixed;
+    background-color: #ccc;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    padding: 10px;
+    flex-direction: column;
+}
+div p{
+    flex: 1;
+}
+#save{
+    background-color: rgb(0, 168, 0);
+    border-radius: 15px;
+    border: 1px solid rgb(0, 168, 0);
+    color: #fff;
+    cursor: pointer;
+    padding: 5px;
+
+}
+#cancel{
+    background-color: #f00;
+    border-radius: 15px;
+    border: 1px solid #f00;
+    color: #fff;
+    cursor: pointer;
+    padding: 5px;
+    display: flex;
+}
+#loading{
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+}
+.form-group{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 10px;
+}
