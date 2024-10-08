@@ -3,6 +3,16 @@ function adicionar(){
 }
 
 function salvar(){
+    let nome = document.getElementById("nome").value
+    let peso = document.getElementById("peso").value
+    let altura = document.getElementById("altura").value
+    let dataNascimento = document.getElementById("dataNascimento").value
+    let cpf = document.getElementById("cpf").value
+
+    if (nome == "" || peso == "" || altura == "" || dataNascimento == "" || cpf == ""){
+        alert("Preencha todos os campos!")
+        return false
+    }
     mostrarLoading()
     setTimeout (function () {
         ocultarLoading()
