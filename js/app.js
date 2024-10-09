@@ -35,7 +35,7 @@ function salvar() {
         ocultarLoading()
         ocultarModal()
         alert("Bodybuilder adicionado com sucesso!")
-        document.getElementById("form").reset()
+        limparFormulario()
         atualizarLista()
     }, 1500)
 
@@ -44,6 +44,11 @@ function salvar() {
 
     return false
 }
+
+function limparFormulario() {
+    document.getElementById("form").reset()
+}
+
 function atualizarLista() {
 
     let tbody = document.getElementsByTagName("tbody")[0]
@@ -60,7 +65,7 @@ function atualizarLista() {
                 <td>${cliente.dataNascimento}</td>
                 <td>
                     <button class="alterar" onclick="mostrarModal()">Alterar</button>
-                    <button class="excluir" onclick="excluir()">Excluir</button>
+                    <button class="excluir" onclick="excluir('${cliente.cpf}')">Excluir</button>
                 </td>
         `
 
@@ -76,13 +81,21 @@ function ocultarLoading() {
 }
 function mostrarModal() {
     document.getElementById("modal").style.display = "flex";
-    document.getElementById("form").reset()
 }
 function ocultarModal() {
     document.getElementById("modal").style.display = "none";
 }
-function excluir() {
+function excluir(cpf) {
     if (confirm("Tem certeza que deseja excluir?")) {
-        alert("Excluído com sucesso!")
+        for (let i = 0; i < clientes.length; i++) {
+            let cliente = clientes[i]
+
+            if (cliente.cpf == cpf) {
+                clientes.splice(i, 1)
+                alert("Excluído com sucesso!")
+                atualizarLista()
+            }
+        }
+
     }
 }
