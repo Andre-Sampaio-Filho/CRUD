@@ -15,6 +15,9 @@ function salvar() {
     let altura = document.getElementById("altura").value
     let dataNascimento = document.getElementById("dataNascimento").value
     let sapato = document.getElementById("sapato").value
+    let celular = document.getElementById("celular").value
+    let whatsapp = document.getElementById("whatsapp").value
+    let imc = document.getElementById("imc").value
 
 
     let novoBodyBuilder = {
@@ -23,20 +26,22 @@ function salvar() {
         peso: peso,
         altura: altura,
         dataNascimento: dataNascimento,
-        sapato: sapato
+        sapato: sapato,
+        celular: celular,
+        whatsapp: whatsapp,
+        imc: imc
     }
 
 
 
 
-    if (nome == "" || peso == "" || altura == "" || dataNascimento == "" || cpf == "" || sapato == "") {
+    if (nome == "" || peso == "" || altura == "" || dataNascimento == "" || cpf == "" || sapato == "" || celular == "" || whatsapp == "" || imc == "") {
         alert("Preencha todos os campos!")
         return false
     }
 
     //se clienteAlterado == null, então está adicionando um novo cliente
     if (clienteAlterado == null) {
-
 
         //adiciona o bodyBuilder na lista de clientes
         clientes.push(novoBodyBuilder)
@@ -56,6 +61,9 @@ function salvar() {
         clienteAlterado.altura = altura
         clienteAlterado.dataNascimento = dataNascimento
         clienteAlterado.sapato = sapato
+        clienteAlterado.celular = celular
+        clienteAlterado.whatsapp = whatsapp
+        clienteAlterado.imc = imc
 
 
 
@@ -68,7 +76,6 @@ function salvar() {
             atualizarLista()
         }, 1500)
     }
-
 
 
     return false
@@ -93,6 +100,9 @@ function atualizarLista() {
                 <td>${cliente.altura}m</td>
                 <td>${cliente.dataNascimento}</td>
                 <td>${cliente.sapato}</td>
+                <td>${cliente.celular}</td>
+                <td>${cliente.whatsapp}</td>
+                <td>${cliente.imc}</td>
                 <td>
                     <button class="alterar" onclick="alterar('${cliente.cpf}')">Alterar</button>
                     <button class="excluir" onclick="excluir('${cliente.cpf}')">Excluir</button>
@@ -140,8 +150,12 @@ function alterar(cpf) {
             document.getElementById("altura").value = cliente.altura
             document.getElementById("dataNascimento").value = cliente.dataNascimento
             document.getElementById("sapato").value = cliente.sapato
+            document.getElementById("celular").value = cliente.celular
+            document.getElementById("whatsapp").value = cliente.whatsapp
             clienteAlterado = cliente
             mostrarModal()
         }
     }
 }
+
+

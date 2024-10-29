@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br>
 
 <head>
     <meta charset="UTF-8">
@@ -21,12 +21,13 @@
                 <th>Altura</th>
                 <th>Data de Nascimento</th>
                 <th>Sapato</th>
-                <th>Ações</th>
+                <th>Celular</th>
+                <th>Whatsapp</th>
+                <th>IMC</th>
+                <th>Ações</th>
             </tr>
-
-
         </thead>
-        <tbody>
+        <tbody id="tbody">
         </tbody>
     </table>
     <div id="modal">
@@ -36,28 +37,39 @@
                 <input type="text" name="cpf" id="cpf">
             </div>
             <div class="form-group">
-                <div class="form-group">
-                    <label>Nome (completo)</label>
-                    <input type="text" name="nome" id="nome">
-                </div>
-                <div class="form-group">
-                    <label>Peso (kg)</label>
-                    <input type="number" name="Peso" id="peso">
-                </div>
-                <div class="form-group">
-                    <label>Altura (cm)</label>
-                    <input type="text" name="altura" id="altura">
-                </div>
-                <div class="form-group">
-                    <label>Data de Nascimento</label>
-                    <input type="date" name="dataNascimento" id="dataNascimento">
-                </div>
-                <div class="form-group">
-                    <label>Tamanho do sapato</label>
-                    <input type="number" name="sapato" id="sapato">
-                </div>
-                <input type="submit" id="save" value="Salvar">
-                <input type="submit" id="cancel" value="Cancelar" onclick="ocultarModal(); return false;">
+                <label>Nome (completo)</label>
+                <input type="text" name="nome" id="nome">
+            </div>
+            <div class="form-group">
+                <label>Peso (kg)</label>
+                <input type="number" name="peso" id="peso">
+            </div>
+            <div class="form-group">
+                <label>Altura (cm)</label>
+                <input type="text" name="altura" id="altura">
+            </div>
+            <div class="form-group">
+                <label>Data de Nascimento</label>
+                <input type="date" name="dataNascimento" id="dataNascimento">
+            </div>
+            <div class="form-group">
+                <label>Tamanho do sapato</label>
+                <input type="number" name="sapato" id="sapato">
+            </div>
+            <div class="form-group">
+                <label>Celular</label>
+                <input type="text" name="celular" id="celular">
+            </div>
+            <div class="form-group">
+                <label>Whatsapp</label>
+                <input type="text" name="whatsapp" id="whatsapp">
+            </div>
+            <div class="form-group">
+                <label>IMC</label>
+                <input type="number" name="imc" id="imc" >
+            </div>
+            <input type="submit" id="save" value="Salvar">
+            <input type="button" id="cancel" value="Cancelar" onclick="ocultarModal()">
         </form>
         <img id="loading" src="images/loading gif.gif" alt="icone circular de carregamento de página" width="80px">
     </div>
@@ -65,3 +77,4 @@
 </body>
 
 </html>
+
